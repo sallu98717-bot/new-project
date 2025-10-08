@@ -13,7 +13,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174', 'http://127.0.0.1:5175'],
+    origin: ['https://allinonesolutionpoint.in', 'https://allinonesolutionpoint.in/', 'www.allinonesolutionpoint.in', 'www.allinonesolutionpoint.in/', 'http://127.0.0.1:5174', 'http://127.0.0.1:5175'],
     methods: ['GET', 'POST']
   }
 });
@@ -22,14 +22,14 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174', 'http://127.0.0.1:5175'],
+  origin: ['https://allinonesolutionpoint.in', 'https://allinonesolutionpoint.in/', 'www.allinonesolutionpoint.in', 'www.allinonesolutionpoint.in/', 'http://127.0.0.1:5175'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://keshavgupta86036:FST2023k@cluster0.06aqope.mongodb.net/axis';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://axiscard98717_db_user:j1D80n5Ns5LK4Unl@cluster0.06aqope.mongodb.net/axis';
 
 console.log('Attempting to connect to MongoDB...');
 
